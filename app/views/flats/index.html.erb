@@ -1,0 +1,9 @@
+<h1>Flats#index</h1>
+<p>Find me in app/views/flats/index.html.erb</p>
+
+<ul>
+  <% @flats.each do |flat| %>
+  <li><%= flat.name %></li>
+  <li><%= cl_image_tag( flat.picture, :gravity=>"face", class: "img-rounded border-user", :height=>280, :width=>280, :x=>0, :crop=>"fill") %>
+  <% end %>
+</ul>
