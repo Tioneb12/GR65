@@ -20,6 +20,31 @@ grange.save!
 hotel = Flat.new(user_id: 1, name: "hotel", address: "Le bourg", zip_code: "12000", city: "Rodez", picture: "moulin-rouge.jpg")
 hotel.save!
 
-puts 'Finished creating flats !'
+hotel4 = Flat.new(user_id: 1, name: "hotel4", address: "Le bourg", zip_code: "12000", city: "Rodez", picture: "moulin-rouge.jpg")
+hotel4.save!
+
+puts 'Finished creating services !'
+
+puts 'Creating services...'
+wifi = Service.new(name: "wifi", code: 0001, icon: "")
+wifi.save!
+
+lv = Service.new(name: "Lave vaisselle", code: 0002, icon: "")
+lv.save!
+
+ll = Service.new(name: "Lave linge", code: 0003, icon: "")
+ll.save!
+
+puts 'Finished creating Services !'
 
 
+puts 'Association Services_appart'
+
+a = FlatService.new(service_id: 1, flat_id: 4)
+a.save
+b = FlatService.new(service_id: 2, flat_id: 4)
+b.save
+c = FlatService.new(service_id: 3, flat_id: 4)
+c.save
+
+puts 'Finished Association Services_appart'

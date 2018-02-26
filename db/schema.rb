@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180224184651) do
+ActiveRecord::Schema.define(version: 20180224223344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "flat_services", force: :cascade do |t|
+    t.bigint "flat_id"
+    t.bigint "service_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["flat_id"], name: "index_flat_services_on_flat_id"
+    t.index ["service_id"], name: "index_flat_services_on_service_id"
+  end
 
   create_table "flats", force: :cascade do |t|
     t.string "name"
@@ -29,6 +38,15 @@ ActiveRecord::Schema.define(version: 20180224184651) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_flats_on_user_id"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "name"
+    t.integer "code"
+    t.string "icon"
+    t.boolean "statut", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,5 +66,7 @@ ActiveRecord::Schema.define(version: 20180224184651) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "flat_services", "flats"
+  add_foreign_key "flat_services", "services"
   add_foreign_key "flats", "users"
 end

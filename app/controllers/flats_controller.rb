@@ -6,6 +6,14 @@ class FlatsController < ApplicationController
   end
 
   def show
-  @flat = Flat.find(params[:id])
+    @flat = Flat.find(params[:id])
+    @flat_services = FlatService.where(flat_id: params[:id]).map
+    @services = Service.where(service_id: @flat_services)
+
   end
+
+
+
 end
+
+

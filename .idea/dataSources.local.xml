@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails GR65: test" uuid="e9f263bc-1aa0-4516-baa0-9ac7876d638e">
+      <database-info product="PostgreSQL" version="10.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <introspection-schemas>GR65_test:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails GR65: development" uuid="163f4c43-30c5-4721-9d8e-b2c00e6fcbcf">
+      <database-info product="PostgreSQL" version="10.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <introspection-schemas>GR65_development:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails GR65: production" uuid="56395535-2958-49a9-aca1-a7e75f6ca5e7">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>GR65</user-name>
+    </data-source>
+  </component>
+</project>
