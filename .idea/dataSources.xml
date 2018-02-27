@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails GR65: test" uuid="e9f263bc-1aa0-4516-baa0-9ac7876d638e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:GR65_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails GR65: development" uuid="163f4c43-30c5-4721-9d8e-b2c00e6fcbcf">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:GR65_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails GR65: production" uuid="56395535-2958-49a9-aca1-a7e75f6ca5e7">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:GR65_production</jdbc-url>
+    </data-source>
+  </component>
+</project>
