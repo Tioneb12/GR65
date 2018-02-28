@@ -1,5 +1,7 @@
-<% content_for :head do %>
 
+<div id="map" data-markers="<%= @markers.to_json %>"></div>
+
+<% content_for :head do %>
 <title><%= @flat.name %></title>
 
 <!-- Twitter Cards -->
@@ -23,6 +25,7 @@
 
 <% end %>
 
+
 <container>
   
 <h1>Flats#show</h1>
@@ -30,7 +33,8 @@
 
 <%= @flat.name %>
 
-<p>test</p>
+
+
 
 
 <% @services.each do |service| %>
@@ -39,4 +43,3 @@
 
 <h2>Localisation</h2>
 </container>
-<div id="map" data-markers="<%= @markers.to_json %>"></div>
