@@ -19,5 +19,6 @@ class FlatsController < ApplicationController
     @services = Service.all
     # @flat_services = FlatService.where(flat_id: params[:id]).map
     # @services = Service.where(service_id: @flat_services)
+    @markers = [{lat: @flat.latitude, lng: @flat.longitude}]
   end
 end
