@@ -1,0 +1,18 @@
+<h1>Profil#show</h1>
+<p>Find me in app/views/profil/show.html.erb</p>
+
+
+
+<%= @user.profil.user_id %>
+<%= @user.profil.first_name %>
+<%= @user.profil.last_name %>
+<%= @user.profil.pseudo %>
+<%= @user.email %>
+
+<% if @user.profil.user_id == current_user.id %>
+  <%= link_to "modifier", user_profil_path, method: "patch" %>
+<% end %>
+
+<% @user.flats.each do |flat| %>
+  <%= flat.name %>
+<% end %>
