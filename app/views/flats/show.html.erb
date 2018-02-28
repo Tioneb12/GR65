@@ -1,7 +1,10 @@
+<div id="map" data-markers="<%= @markers.to_json %>"></div>
+
 <container>
 <%= @flat.name %>
 
-<p>test</p>
+
+
 
 <% @services.each do |service| %>
 <%= service.name %>
@@ -9,4 +12,3 @@
 
 <h2>Localisation</h2>
 </container>
-<div id="map" data-markers="<%= @markers.to_json %>"></div>
