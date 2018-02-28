@@ -1,5 +1,6 @@
 User.destroy_all
 Flat.destroy_all
+Service.destroy_all
 
 
 # db/seeds.rb
@@ -17,22 +18,22 @@ senos.save!
 grange = Flat.new(user_id: 1, name: "Les grangettes", address: "Le bourg", zip_code: "12320", city: "Conques", picture: "moulin-rouge.jpg")
 grange.save!
 
-hotel = Flat.new(user_id: 1, name: "hotel", address: "Le bourg", zip_code: "12000", city: "Rodez", picture: "moulin-rouge.jpg")
+hotel = Flat.new(user_id: 1, name: "hotel", address: "avenue victor hugo", zip_code: "12000", city: "Rodez", picture: "moulin-rouge.jpg")
 hotel.save!
 
-hotel4 = Flat.new(user_id: 1, name: "hotel4", address: "Le bourg", zip_code: "12000", city: "Rodez", picture: "moulin-rouge.jpg")
+hotel4 = Flat.new(user_id: 1, name: "hotel4", address: "rue de la barrière", zip_code: "12000", city: "Rodez", picture: "moulin-rouge.jpg")
 hotel4.save!
 
 puts 'Finished creating services !'
 
 puts 'Creating services...'
-wifi = Service.new(name: "wifi", code: 0001, icon: "")
+wifi = Service.new(name: "wifi", code: "0001", icon: "")
 wifi.save!
 
-lv = Service.new(name: "Lave vaisselle", code: 0002, icon: "")
+lv = Service.new(name: "Lave vaisselle", code: "0002", icon: "")
 lv.save!
 
-ll = Service.new(name: "Lave linge", code: 0003, icon: "")
+ll = Service.new(name: "Lave linge", code: "0003", icon: "")
 ll.save!
 
 puts 'Finished creating Services !'
