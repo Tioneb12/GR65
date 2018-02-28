@@ -7,8 +7,6 @@ class CreateFlats < ActiveRecord::Migration[5.1]
       t.string :city
       t.integer :capacity
       t.string :picture
-      t.float :lng
-      t.float :lat
       t.float :pk
       t.references :user, foreign_key: true
 

@@ -1,13 +1,12 @@
-<h1>Flats#show</h1>
-<p>Find me in app/views/flats/show.html.erb</p>
-
+<container>
 <%= @flat.name %>
 
-<p>Services</p>
+<p>test</p>
 
-
-test
-
-<%= @services.each do |service| %>
-<% service.service_id %>
+<% @services.each do |service| %>
+<%= service.name %>
 <% end %>
+
+<h2>Localisation</h2>
+</container>
+<div id="map" data-markers="<%= @markers.to_json %>"></div>
