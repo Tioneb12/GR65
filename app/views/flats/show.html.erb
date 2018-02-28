@@ -1,3 +1,29 @@
+<% content_for :head do %>
+
+<title><%= @flat.name %></title>
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@leddm">
+<meta name="twitter:site" content="@https://twitter.com/leddm">
+<meta name="twitter:title" content="Accueil">
+<meta name="twitter:description" content="Dico des mots est un dictionnaire collaboratif créé par les internautes. Créé en avril 2005 par une bande de potes, Dico des mots propose  mots et expressionsToi aussi, tu peux proposer une ex">
+<meta name="twitter:image" content="logo.png">
+<!-- /JM Twitter Cards -->
+
+<!-- Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Dico des mots" />
+<meta property="og:description" content="Le dictionnaire pas académique" />
+<meta property="og:url" content="https://dico-des-mots.com/" />
+<meta property="og:site_name" content="Dico des mots" />
+<meta property="og:image" content="" />
+<meta property="og:locale" content="fr_FR" />
+<!-- /Open Graph Tags -->
+
+<% end %>
+
+
 <h1>Flats#show</h1>
 <p>Find me in app/views/flats/show.html.erb</p>
 
@@ -7,7 +33,3 @@
 
 
 test
-
-<%= @services.each do |service| %>
-<% service.service_id %>
-<% end %>
