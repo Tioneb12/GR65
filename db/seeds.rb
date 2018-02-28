@@ -1,12 +1,16 @@
 User.destroy_all
 Flat.destroy_all
 Service.destroy_all
+Profil.destroy_all
 
 
 # db/seeds.rb
 puts 'Creating users...'
 ben = User.new(email: "ben@yopmail.com", password: "123456")
 ben.save!
+
+ben2 = User.new(email: "ben2@yopmail.com", password: "123456")
+ben2.save!
 
 
 puts 'Finished creating users !'
@@ -49,3 +53,12 @@ c = FlatService.new(service_id: 3, flat_id: 4)
 c.save
 
 puts 'Finished Association Services_appart'
+
+puts 'Creating profil user'
+
+gogo = Profil.new(user_id: 2, first_name: "Zozo", last_name: "Georges", pseudo: "User2", city: "Paris", country: "France")
+gogo.save!
+
+gogo2 = Profil.new(user_id: 1, first_name: "Zozo", last_name: "Georges", pseudo: "User1", city: "Paris", country: "France")
+gogo2.save!
+puts 'Finished creating profil user'
