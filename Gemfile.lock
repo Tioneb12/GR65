@@ -49,6 +49,10 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.0)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     cloudinary (1.8.3)
       aws_cf_signer
       rest-client
@@ -111,6 +115,8 @@ GEM
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     puma (3.11.2)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.4)
     rack-proxy (0.6.3)
       rack
@@ -208,6 +214,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass
+  carrierwave (~> 1.2)
   cloudinary
   devise
   figaro
@@ -219,6 +226,7 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma
+  pundit
   rails (= 5.1.5)
   redis
   sass-rails

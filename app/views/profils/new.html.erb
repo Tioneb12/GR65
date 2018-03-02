@@ -2,15 +2,6 @@
   <h1>Profil#create</h1>
 <p>Find me in app/views/profil/create.html.erb</p>
 
-<%= simple_form_for @profil do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :pseudo %>
-  <%= f.input :city %>
-  <%= f.input :country, as: :text %>
-  <%= f.input :description %>
-  <%= f.input :birth_date, as: :date, order: [:day, :month, :year] %>
-  <%= f.input :avatar %>
-  <%= f.button :submit %>
-<% end %>
+<%= render "form" %>
+
 </container>

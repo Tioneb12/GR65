@@ -9,9 +9,6 @@
 <%= @user.profil.pseudo %>
 <%= @user.email %>
 
-<% if @user.profil.user_id == current_user.id %>
-  <%= link_to "modifier", user_profil_path, method: "patch" %>
-<% end %>
 
 <% @user.flats.each do |flat| %>
   <%= flat.name %>
