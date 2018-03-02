@@ -1,24 +1,17 @@
-<div class="container">
-
-<%= simple_form_for @profil,
-    wrapper: :horizontal_form,
-    wrapper_mappings: {
-    check_boxes: :horizontal_radio_and_checkboxes,
-    radio_buttons: :horizontal_radio_and_checkboxes,
-    file: :horizontal_file_input,
-    boolean: :horizontal_boolean
-  } do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :pseudo %>
-  <%= f.input :city %>
-  <%= f.input :country, as: :string %>
-  <%= f.input :description, as: :text %>
-  <%= f.input :birth_date, as: :date, order: [:day, :month, :year] %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.button :submit %>
+<%= simple_form_for @profil do |f| %>
+  <div class="form-inputs">
+    <%= f.error_notification %>
+    <%= f.input :first_name, required: true, autofocus: true %>
+    <%= f.input :last_name, required: true %>
+    <%= f.input :pseudo, required: true %>
+    <%= f.input :city, required: true %>
+    <%= f.input :country, as: :string, required: true %>
+    <%= f.input :description, as: :text, required: true %>
+    <%= f.input :birth_date, as: :date, order: [:day, :month, :year], required: true %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, "Save", class: "btn btn-primary" %>
+  </div>
 <% end %>
-
-</div>
