@@ -16,16 +16,16 @@ ben2.save!
 puts 'Finished creating users !'
 
 puts 'Creating flats...'
-senos = Flat.new(user_id: 1, name: "Domaine de Sénos", address: "Le bourg", zip_code: "12320", city: "Sénergues", picture: "moulin-rouge.jpg")
+senos = Flat.new(user_id: 1, name: "Domaine de Sénos", address: "Le bourg", zip_code: "12320", city: "Sénergues", picture: "moulin-rouge.jpg", pk: "1230,87")
 senos.save!
 
-grange = Flat.new(user_id: 1, name: "Les grangettes", address: "Le bourg", zip_code: "12320", city: "Conques", picture: "moulin-rouge.jpg")
+grange = Flat.new(user_id: 1, name: "Les grangettes", address: "Le bourg", zip_code: "12320", city: "Conques", picture: "moulin-rouge.jpg", pk: "1180,87")
 grange.save!
 
-hotel = Flat.new(user_id: 1, name: "hotel", address: "avenue victor hugo", zip_code: "12000", city: "Rodez", picture: "moulin-rouge.jpg")
+hotel = Flat.new(user_id: 1, name: "hotel", address: "avenue victor hugo", zip_code: "12000", city: "Rodez", picture: "moulin-rouge.jpg", pk: "1130,87")
 hotel.save!
 
-hotel4 = Flat.new(user_id: 1, name: "hotel4", address: "rue de la barrière", zip_code: "12000", city: "Rodez", picture: "moulin-rouge.jpg")
+hotel4 = Flat.new(user_id: 1, name: "hotel4", address: "rue de la barrière", zip_code: "12000", city: "Rodez", picture: "moulin-rouge.jpg", pk: "1080,87")
 hotel4.save!
 
 puts 'Finished creating services !'
@@ -56,9 +56,9 @@ puts 'Finished Association Services_appart'
 
 puts 'Creating profil user'
 
-gogo = Profil.new(user_id: 2, first_name: "Zozo", last_name: "Georges", pseudo: "User2", city: "Paris", country: "France")
+gogo = Profil.new(user_id: 2, first_name: "Zozo2", last_name: "Georges2", pseudo: "User2", city: "Paris", country: "France")
 gogo.save!
 
-gogo2 = Profil.new(user_id: 1, first_name: "Zozo", last_name: "Georges", pseudo: "User1", city: "Paris", country: "France")
+gogo2 = Profil.new(user_id: 1, first_name: "Zozo1", last_name: "Georges1", pseudo: "User1", city: "Paris", country: "France")
 gogo2.save!
 puts 'Finished creating profil user'

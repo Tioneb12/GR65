@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   get "/pages/:page" => "pages#show"
   resources :flats, only:[:index,:show]
 
-  resource :user, only: [] do
-    resources :profils, only: [:show, :new, :create, :update]
-    resources :flats, only: []
-  end
+  # resource :user, only: [] do
+  # end
+  resources :profils, only: [:show, :new, :create, :update]
+  # resources :flats, only: []
 
 end

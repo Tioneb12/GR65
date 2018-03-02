@@ -1,0 +1,24 @@
+<div class="container">
+
+<%= simple_form_for @profil,
+    wrapper: :horizontal_form,
+    wrapper_mappings: {
+    check_boxes: :horizontal_radio_and_checkboxes,
+    radio_buttons: :horizontal_radio_and_checkboxes,
+    file: :horizontal_file_input,
+    boolean: :horizontal_boolean
+  } do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :pseudo %>
+  <%= f.input :city %>
+  <%= f.input :country, as: :string %>
+  <%= f.input :description, as: :text %>
+  <%= f.input :birth_date, as: :date, order: [:day, :month, :year] %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.button :submit %>
+<% end %>
+
+</div>

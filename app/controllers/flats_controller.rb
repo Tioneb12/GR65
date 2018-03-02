@@ -2,7 +2,7 @@ class FlatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-  @flats = Flat.all
+  @flats = Flat.all.order(pk: :desc)
   @flats = Flat.where.not(latitude: nil, longitude: nil)
 
     @markers = @flats.map do |flat|
