@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301100208) do
+ActiveRecord::Schema.define(version: 20180304193740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,11 @@ ActiveRecord::Schema.define(version: 20180301100208) do
   create_table "flats", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.string "adress2"
     t.integer "zip_code"
     t.string "city"
+    t.string "phone_number"
+    t.string "mobil_phone"
     t.integer "capacity"
     t.string "picture"
     t.float "pk"
@@ -37,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180301100208) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.string "photo"
     t.index ["user_id"], name: "index_flats_on_user_id"
   end
 

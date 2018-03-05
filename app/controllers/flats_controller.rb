@@ -21,4 +21,24 @@ class FlatsController < ApplicationController
     # @services = Service.where(service_id: @flat_services)
     @markers = [{lat: @flat.latitude, lng: @flat.longitude}]
   end
+
+  def new
+    @flat = Flat.new
+  end
+
+  def create
+    @flat = Flat.new(flat_params)
+    @flat = Flat.create
+    if @flat.save
+      redirect_to flat_path(@flat)
+    byebug
+    else
+      render "new"
+    end
+  end
+
+  def flat_params
+    params.require(:flat).permit(:name,:address,:zip_code,:city,:capacity,:photo,:photo_cache)
+  end
+
 end

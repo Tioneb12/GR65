@@ -1,4 +1,6 @@
 class Flat < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
+
   belongs_to :user
   has_many :flat_services
   has_many :services, dependent: :destroy, through: :flat_services
